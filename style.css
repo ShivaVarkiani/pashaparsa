@@ -26,9 +26,9 @@ body{
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure space between left-aligned list and centered logo */
+    justify-content: space-between; 
     padding-left: 10px 100px;
-    position: relative; /* Keep logo centered regardless of the list */
+    position: relative; 
     width: 100%;
 }
 
@@ -51,35 +51,31 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
 }
-/* Existing styles... */
 
-/* Position the lines */
-/* Ensure smooth transitions */
 .line1, .line2 {
     position: fixed;
     white-space: nowrap;
-    transition: transform 1s ease-in-out; /* Smooth transition for movement */
+    transition: transform 1s ease-in-out;
     margin-top: 0;
     padding: 0;
 }
 
 .line1 {
     top: 40%;
-    left: 50px /* Start from the left edge */
+    left: 50px 
 }
 
 .line2 {
     top: 50%;
-    right: 200px; /* Start from the right edge */
-}
+    right: 200px; 
 
-/* Move lines out of view */
+}
 .line1.hidden {
-    transform: translateX(100vw); /* Move right out of view */
+    transform: translateX(100vw); 
 }
 
 .line2.hidden {
-    transform: translateX(-100vw); /* Move left out of view */
+    transform: translateX(-100vw); 
 }
 
 
@@ -107,17 +103,9 @@ nav ul li a {
     width: 200px;
     height: 100px;
 }
-/*.header-image {
-    width: 853px;
-    height: 800px;
-    background-image: url(images/2024-08-18\ 11.22.01.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
-/* styles.css */
+
 footer {
-    display: none; /* Initially hide the footer */
+    display: none; 
     position: fixed;
     bottom: 20px;
     font-size: 2px;
@@ -127,8 +115,8 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    line-height: 50px; /* Center text vertically */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition for visibility */
+    line-height: 50px; 
+    transition: opacity 0.3s ease-in-out;
 }
 
 footer.visible {
@@ -137,20 +125,20 @@ footer.visible {
 }
 
 .socialIcons {
-    display: none; /* Initially hide icons */
+    display: none; 
     position: fixed;
-    bottom: 30px; /* Adjust as needed */
+    bottom: 30px; 
     left: 0;
     width: 100%;
     justify-content: center;
-    transition: opacity 0.3s ease-in-out; /* Smooth transition for visibility */
+    transition: opacity 0.3s ease-in-out; 
     padding: 5px;
     
 }
 
 .socialIcons.visible {
-    display: flex; /* Show icons */
-    opacity: 1; /* Fully visible */
+    display: flex; 
+    opacity: 1; 
 }
 
 .socialIcons a{
@@ -248,7 +236,7 @@ footer.visible {
     }
 
     .socialIcons {
-        bottom: 10px; /* Adjust if needed */
+        bottom: 10px; 
     }
 
     .socialIcons a {
