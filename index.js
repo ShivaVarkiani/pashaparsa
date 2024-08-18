@@ -1,24 +1,58 @@
+// script.js
 document.addEventListener('DOMContentLoaded', function() {
     let lastScrollTop = 0; // Keeps track of the last scroll position
-
+    const line1 = document.querySelector('.line1');
+    const line2 = document.querySelector('.line2');
+    
     window.addEventListener('scroll', function() {
         let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.scrollHeight;
+        const viewportHeight = window.innerHeight;
 
-        // Check if scrolling down
-        if (currentScrollTop > lastScrollTop) {
-            // Scrolling down
-            document.querySelector('.line1').classList.add('hidden');
-            document.querySelector('.line2').classList.add('hidden');
+        // Determine if we are scrolled past a certain threshold
+        if (currentScrollTop + viewportHeight >= documentHeight) {
+            // If at the bottom of the page, keep lines hidden
+            line1.classList.add('hidden');
+            line2.classList.add('hidden');
         } else {
-            // Scrolling up
-            document.querySelector('.line1').classList.remove('hidden');
-            document.querySelector('.line2').classList.remove('hidden');
+            // Check if scrolling down or up
+            if (currentScrollTop > lastScrollTop) {
+                // Scrolling down
+                line1.classList.add('hidden');
+                line2.classList.add('hidden');
+            } else {
+                // Scrolling up
+                line1.classList.remove('hidden');
+                line2.classList.remove('hidden');
+            }
         }
 
         // Update the last scroll position
-        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+       // lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const icons = document.querySelectorAll('.socialIcons');
+    
+    window.addEventListener('scroll', function() {
+        let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.scrollHeight;
+        const viewportHeight = window.innerHeight;
+
+        
+        if (currentScrollTop + viewportHeight >= documentHeight) {
+            footer.classList.add('visible');
+            icons.forEach(icon => icon.classList.add('visible'));
+        } else {
+            footer.classList.remove('visible');
+            icons.forEach(icon => icon.classList.remove('visible'));
+        }
+    });
+});
+
 
 const form = document.querySelector('form'); 
 
