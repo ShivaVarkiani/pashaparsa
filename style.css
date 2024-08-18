@@ -18,11 +18,14 @@ body{
     overflow-x: hidden;
     
 }    
-.image{
-    width: 550px;
-    height: 600px;
-    margin-left: 450px;
-}    
+.main-img-container{
+    width: 100%;
+}
+.main-image{
+    display: flex;
+    margin: auto;
+    width: 40%;
+}   
 nav {
     display: flex;
     align-items: center;
