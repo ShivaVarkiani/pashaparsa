@@ -193,6 +193,39 @@ footer.visible {
 }
 
 /* responsive */
+@media only screen and (max-width: 1200px) {
+    nav {
+        padding: 10px 2%;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    .logoimage {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .image {
+        width: 100%;
+    }
+
+    .logoimage {
+        width: 120px;
+    }
+
+    .socialIcons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socialIcons a i {
+        font-size: 1em;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     nav {
         flex-direction: column;
