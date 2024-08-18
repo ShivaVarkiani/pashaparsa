@@ -65,12 +65,12 @@ nav ul li a {
 
 .line1 {
     top: 40%;
-    left: 50px 
+    left: 5% ;
 }
 
 .line2 {
     top: 50%;
-    right: 200px; 
+    right: 20%; 
 
 }
 .line1.hidden {
