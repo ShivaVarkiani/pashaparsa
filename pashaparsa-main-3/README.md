@@ -1,2 +1,0 @@
-# pashaparsa
-pasha parsa website 
