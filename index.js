@@ -1,6 +1,5 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
-    let lastScrollTop = 0; // Keeps track of the last scroll position
+    let lastScrollTop = 0; 
     const line1 = document.querySelector('.line1');
     const line2 = document.querySelector('.line2');
     
@@ -9,26 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const documentHeight = document.documentElement.scrollHeight;
         const viewportHeight = window.innerHeight;
 
-        // Determine if we are scrolled past a certain threshold
         if (currentScrollTop + viewportHeight >= documentHeight) {
-            // If at the bottom of the page, keep lines hidden
             line1.classList.add('hidden');
             line2.classList.add('hidden');
         } else {
-            // Check if scrolling down or up
             if (currentScrollTop > lastScrollTop) {
-                // Scrolling down
                 line1.classList.add('hidden');
                 line2.classList.add('hidden');
             } else {
-                // Scrolling up
                 line1.classList.remove('hidden');
                 line2.classList.remove('hidden');
             }
         }
 
-        // Update the last scroll position
-       // lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+        
     });
 });
 
